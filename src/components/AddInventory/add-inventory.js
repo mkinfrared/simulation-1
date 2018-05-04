@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 import './add-inventory.css'
 
 
@@ -62,7 +63,7 @@ export default class AddInventory extends Component {
 					<p>Price:</p>
 					<input onChange={(e) => this.handleChange(e)} type="text" name="price" value={this.state.price}/>
 				</div>
-				<button className="cancel-btn" onClick={this.handleCancel}>Cancel</button>
+				<Link to="/dashboard"><button className="cancel-btn" onClick={this.handleCancel}>Cancel</button></Link>
 				<button className="add-btn" onClick={this.addToInventory}>Add to Inventory</button>
 			</div>
 		)
