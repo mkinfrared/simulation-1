@@ -1,0 +1,63 @@
+.add-inventory {
+	width: 400px;
+	height: 550px;
+	background-color: #3AD886;
+	margin: 40px auto;
+	padding: 20px;
+	position: relative;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+	border-radius: 5px;
+}
+
+.add-inventory .product-image {
+	background-color: #FFFFFF;
+	margin-bottom: 20px;
+	width: 160px;
+	height: 160px;
+}
+
+.input-form {
+	text-align: left;
+}
+
+.add-inventory p, .add-inventory input {
+	margin-bottom: 10px;
+	width: 90%;
+}
+
+.add-inventory input {
+	height: 30px;
+	border-radius: 10px;
+	border: 2px solid #2DA867;
+	padding: 0 10px;
+}
+
+.add-inventory input:active, .add-inventory input:focus {
+	border: 2px solid #484BD6;
+	outline: none;
+}
+
+.add-inventory button {
+	position: absolute;
+	bottom: 30px;
+	background-color: #ED6B5A;
+	color: #000000;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.add-inventory button:hover {
+	background-color: #FF7161;
+	transition: all 0.2s linear;
+}
+
+.add-inventory .cancel-btn {
+	left: 40px;
+}
+
+.add-inventory .add-btn {
+	right: 40px;
+}

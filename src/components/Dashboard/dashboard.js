@@ -6,13 +6,21 @@ import './dashboard.css'
 export default class Dashboard extends Component {
 	constructor() {
 		super();
-		this.state = {
+		this.state             = {
 			display: []
-		}
+		};
+		this.deleteProduct     = this.deleteProduct.bind(this);
+		this.componentDidMount = this.componentDidMount.bind(this);
+		
 	}
 	
 	componentDidMount() {
 		axios.get('/stock/products').then((resp) => this.setState({display: resp.data}));
+	}
+	
+	deleteProduct(e) {
+		const id = e.target.dataset.prodId;
+		axios.delete(`/stock/product/${id}`).then(() => this.componentDidMount());
 	}
 	
 	render() {
@@ -25,7 +33,9 @@ export default class Dashboard extends Component {
 					<h3>{elem.brand_name}</h3>
 					<h4>{elem.model_name}</h4>
 					<p>${elem.price}</p>
-					<button className="del-btn">Delete</button>
+					<button data-prod-id={elem.product_id} className="del-btn"
+					        onClick={(e) => this.deleteProduct(e)}>Delete
+					</button>
 					<button className="edit-btn">Edit</button>
 				</div>
 			</div>;

@@ -70,4 +70,11 @@
 	border: none;
 	border-radius: 5px;
 	font-family: "Open Sans";
+	outline: none;
+	cursor: pointer;
+}
+
+.product-info > button:hover {
+	background-color: #45FF9C;
+	transition: all 0.4s linear;
 }

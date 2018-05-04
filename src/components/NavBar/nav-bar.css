@@ -37,9 +37,14 @@
 }
 
 .nav-bar ul > li > a {
-	color: #FFFFFF;
+	color: #000000;
 	display: inline-block;
 	padding: 10px;
 	background-color: #ED6B5A;
 	border-radius: 5px;
+}
+
+.nav-bar ul > li > a:hover {
+	background-color: #FF756E;
+	transition: all 0.2s linear;
 }

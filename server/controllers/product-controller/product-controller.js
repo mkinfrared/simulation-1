@@ -40,7 +40,7 @@ module.exports = {
 		      {id}       = req.params;
 		
 		dbInstance.deleteProduct(id)
-		          .then(() => res.status(200).send())
+		          .then((resp) => res.status(200).send(resp))
 		          .catch(() => res.status(500).send());
 	}
 };
